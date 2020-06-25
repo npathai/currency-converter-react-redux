@@ -3,20 +3,14 @@ import ReactDOM from 'react-dom';
 import store from './store/configureStore'
 import {Provider} from 'react-redux'
 
-import Conversion from './components/conversion.js';
+import Conversion from './containers/Conversion'
 
 class MainComponent extends React.Component {
-
-    componentDidMount() {
-        store.subscribe(() => {
-            this.setState({})
-        })
-    }
 
     render() {
         return (
             <div>
-                <Conversion originAmount={store.getState().originAmount}/>
+                <Conversion testProperty="test value"/>
             </div>
         )
     }
